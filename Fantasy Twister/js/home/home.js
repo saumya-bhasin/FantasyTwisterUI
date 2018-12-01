@@ -28,3 +28,19 @@ function renderTopTeams(teamsData) {
         $("#team_list").append(topTeamTemplate(team));
     });
 }
+
+function onclickPlayerName(targetElem) {
+    const playerUrl = targetElem.getAttribute('data-url');
+
+    $.get(playerUrl, function(response) {
+        navToPlayerProfile(response);
+        // console.log(response);
+    });
+}
+
+function onclickTeamName(targetElem) {
+    const teamUrl = targetElem.getAttribute('data-url');
+    $.get(teamUrl, function(response) {
+        navToTeamProfile(response);
+    });
+}

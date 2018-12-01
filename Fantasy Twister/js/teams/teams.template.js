@@ -1,13 +1,13 @@
-function playerListTemplate() {
+function teamListTemplate() {
     return `
             <div id="data" class="container text-center">
-                <h2>Players</h2>
+                <h2>Teams</h2>
                 <p>&nbsp;</p>
-                <ul id="player_list" class="media-list"></ul>
+                <ul id="team_list" class="media-list"></ul>
             </div>
     `
 }
-
+//
 // function playerListDataTemplate(player) {
 //     const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
 //     const teamUrl = `http://localhost:5000/api/team/${player.team_id}`;
