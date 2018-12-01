@@ -54,21 +54,44 @@ function highLightsTemplate() {
   `;
 };
 
-function topPlayersTemplate(player) {
+function topPlayerTemplate(player) {
     const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
     const teamUrl = `http://localhost:5000/api/team/${player.team_id}`;
-    const imageAlt = `${player.player_name}'s profile picture"`;
+    const imageAlt = `${player.player_name}'s profile picture`;
 
     return `
             <li class="media">
                 <div class="media-left">
-                    <a href=${playerUrl}>
-                        <img class="media-object" src=${player.picture} alt="Generic placeholder image">
+                    <a onclick=onclickPlayerName(this) data-url=${playerUrl}>
+                        <img class="media-object" src=${player.picture} alt=${imageAlt}>
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">${player.player_name}</h4>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    <a onclick=onclickPlayerName(this) data-url=${playerUrl}>
+                        <h4 class="media-heading">${player.player_name}</h4>
+                    </a>
+                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>${player.team_name}</a>
+                </div>
+            </li>
+        `;
+}
+
+function topTeamTemplate(team) {
+    const teamUrl = `http://localhost:5000/api/team/${team.team_id}`;
+    const imageAlt = `${team.team_name}'s logo`;
+
+    return `
+            <li class="media">
+                <div class="media-left">
+                    <a onclick=onclickPlayerName(this) data-url=${teamUrl}>
+                        <img class="media-object" src=${team.logo} alt=${imageAlt}>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <a onclick=onclickPlayerName(this) data-url=${teamUrl}>
+                        <h4 class="media-heading">${team.team_name}</h4>
+                    </a>
+                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>${team.location}</a>
                 </div>
             </li>
         `;

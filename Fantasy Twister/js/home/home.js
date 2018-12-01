@@ -1,7 +1,8 @@
 function renderHomeContent() {
-  $('#content').append(carouselTemplate());
-  $('#content').append(highLightsTemplate());
-  getHomeData();
+    emptyContent();
+    $('#content').append(carouselTemplate());
+    $('#content').append(highLightsTemplate());
+    getHomeData();
 };
 
 function getHomeData() {
@@ -12,11 +13,18 @@ function getHomeData() {
         val=JSON.parse(data);
 
         renderTopPlayers(val.data.top_players);
+        renderTopTeams(val.data.top_teams);
     });
 }
 
 function renderTopPlayers(playersData) {
     playersData.forEach((player) => {
-        $("#player_list").append(topPlayersTemplate(player));
+        $("#player_list").append(topPlayerTemplate(player));
+    });
+}
+
+function renderTopTeams(teamsData) {
+    teamsData.forEach((team) => {
+        $("#team_list").append(topTeamTemplate(team));
     });
 }

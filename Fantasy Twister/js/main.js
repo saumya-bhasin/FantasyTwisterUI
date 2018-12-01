@@ -11,7 +11,7 @@
 }*/
 
 function emptyContent() {
-	$('#content').empty();
+    $('#content').empty();
 };
 
 $(document).ready(function(){
