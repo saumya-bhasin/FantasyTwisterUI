@@ -1,5 +1,6 @@
 function navToTeamProfile(response) {
     emptyContent();
     //TODO: teamProfileTemplate
-    $("#content").append(`<div>${response}<div>`);
+	console.log("response "+response);
+    $("#content").append(displayTeam());
 }

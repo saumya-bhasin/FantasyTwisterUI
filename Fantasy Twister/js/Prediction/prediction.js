@@ -29,7 +29,7 @@ function renderPridictionList(predictionData) {
 	rendercoach(predictionData.coach_of_year);
 	renderEast(predictionData.teams_to_play_off.east_candidates);
 	renderWest(predictionData.teams_to_play_off.west_candidates);
-
+	
 }
 
 function renderChampions(allchampions) {
@@ -74,7 +74,6 @@ function renderWest(candidates){
 	
 	$.ajax({
         type:'GET',
-        //TODO: correct api, date
         url: "http://127.0.0.1:5000/api/team/"+ team,
     }).done(function(data) {
         value=JSON.parse(data);

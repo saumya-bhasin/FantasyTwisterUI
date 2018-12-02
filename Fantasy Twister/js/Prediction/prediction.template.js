@@ -6,7 +6,7 @@ function predictionTemplate() {
                 <ul id="prediction_list" class="media-list">
 				</ul>
 					<div class="row">
-						<p id="champion"></p>							
+						<p id="champion"></p>
 					</div>
 					&nbsp;
 					<div class="row">
@@ -41,13 +41,21 @@ function predictionTemplate() {
 }
 
 function displayChampion(champion1,champion2,champion3) {
+	
+	const team1Url = `http://localhost:5000/api/team/${champion1.team_id}`;
+	const team2Url = `http://localhost:5000/api/team/${champion2.team_id}`;
+	const team3Url = `http://localhost:5000/api/team/${champion3.team_id}`;
+
+	
     return `
             <div class="col-sm-4">
 				<h4>East Champion</h4>
 					<div class="thumbnail">
 						<img src=${champion1.logo}>
 						<div class="caption">
-							<p>${champion1.team_name}</p>
+							<a onclick=onclickTeamName(this) data-url=${team1Url}>
+								<p>${champion1.team_name}</p>
+							</a>
 						</div>
 					</div>
 			</div>
@@ -57,7 +65,9 @@ function displayChampion(champion1,champion2,champion3) {
 					<div class="thumbnail">
 						<img src=${champion2.logo}>
 						<div class="caption">
-							<p>${champion2.team_name}</p>
+							<a onclick=onclickTeamName(this) data-url=${team2Url}>
+								<p>${champion2.team_name}</p>
+							</a>
 						</div>
 					</div>
 			</div>
@@ -66,7 +76,9 @@ function displayChampion(champion1,champion2,champion3) {
 					<div class="thumbnail">
 						<img src=${champion3.logo}>
 						<div class="caption">
-							<p>${champion3.team_name}</p>
+							<a onclick=onclickTeamName(this) data-url=${team3Url}>
+								<p>${champion3.team_name}</p>
+							</a>
 						</div>
 					</div>
 			</div>
@@ -74,13 +86,17 @@ function displayChampion(champion1,champion2,champion3) {
 }
 
 function displayMVP(player){
+    const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
+
 	return `
 				<h3>MVP</h3>
 					<div class="thumbnail">
 						<!--<img src=${player.logo}>-->
 						<p>#player pic</p>
 						<div class="caption text-center">
-							<h4>${player.player_name}</h4>
+							<a onclick=onclickPlayerName(this) data-url=${playerUrl}>
+								<p>${player.player_name}</p>
+							</a>
 							<p>points: ${player.prediction.statistics.points}</p>
 							<p>rebounds: ${player.prediction.statistics.rebounds}</p>
 							<p>assists: ${player.prediction.statistics.assists}</p>
@@ -94,13 +110,17 @@ function displayMVP(player){
 }
 
 function displayMIP(player){
+	 const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
+
 	return `
 				<h3>MIP</h3>
 					<div class="thumbnail">
 						<!--<img src=${player.logo}>-->
 						<p>#player pic</p>
 						<div class="caption text-center">
-							<h4>${player.player_name}</h4>
+							<a onclick=onclickPlayerName(this) data-url=${playerUrl}>
+								<p>${player.player_name}</p>
+							</a>
 							<p>points: ${player.prediction.statistics.points}</p>
 							<p>rebounds: ${player.prediction.statistics.rebounds}</p>
 							<p>assists: ${player.prediction.statistics.assists}</p>
@@ -114,13 +134,17 @@ function displayMIP(player){
 }
 
 function displaycoach(coach){
+	const team1Url = `http://localhost:5000/api/team/${coach.team_id}`;
+
 	return `
 				<h3>Coach of the Year</h3>
 					<div class="thumbnail">
 						<img src=${coach.coach_photo}>
 						<div class="caption text-center">
 							<h4>${coach.coach_name}</h4>
-							<p>${coach.team_name}</p>
+							<a onclick=onclickTeamName(this) data-url=${team1Url}>
+								<p>${coach.team_name}</p>
+							</a>
 						</div>
 					</div>
         `;
