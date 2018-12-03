@@ -83,15 +83,15 @@ function topTeamTemplate(team) {
     return `
             <li class="media">
                 <div class="media-left">
-                    <a onclick=onclickPlayerName(this) data-url=${teamUrl}>
+                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>
                         <img class="media-object" src=${team.logo} alt=${imageAlt}>
                     </a>
                 </div>
                 <div class="media-body">
-                    <a onclick=onclickPlayerName(this) data-url=${teamUrl}>
+                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>
                         <h4 class="media-heading">${team.team_name}</h4>
                     </a>
-                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>${team.location}</a>
+                    ${team.location}
                 </div>
             </li>
         `;
