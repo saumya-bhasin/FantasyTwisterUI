@@ -1,6 +1,6 @@
 body{
   background-color:#F4F5F7;
-  
+  height:100%
   }
   .navbar{
 	margin-bottom:0;
@@ -71,6 +71,16 @@ body{
  color:white;
  }
 
+
  .player-list {
      display: none;
  }
+ 
+ html{
+    height: 100%
+}
+
+.footer {
+  height: 50px;
+  margin-top: -50px;
+}

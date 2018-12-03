@@ -25,8 +25,8 @@ function renderPridictionList(predictionData) {
 	console.log(predictionData.champion);
 	renderChampions(predictionData.champion);
 	renderMVP(predictionData.MVP);
-	renderMIP(predictionData.MIP);
-	rendercoach(predictionData.coach_of_year);
+	//renderMIP(predictionData.MIP);
+	//rendercoach(predictionData.coach_of_year);
 	renderEast(predictionData.teams_to_play_off.east_candidates);
 	renderWest(predictionData.teams_to_play_off.west_candidates);
 	

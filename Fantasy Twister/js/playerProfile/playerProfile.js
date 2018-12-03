@@ -1,6 +1,8 @@
 function navToPlayerProfile(response) {
     emptyContent();
     //TODO: playerProfileTemplate
-	console.log("response player "+response);
-    $("#content").append(displayPlayer(response));
+	val=JSON.parse(response);
+	console.log("response player "+val);
+
+    $("#content").append(displayPlayer(val.data));
 }

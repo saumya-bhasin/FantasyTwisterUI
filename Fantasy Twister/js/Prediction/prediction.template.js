@@ -91,24 +91,30 @@ function displayMVP(player){
 	return `
 				<h3>MVP</h3>
 					<div class="thumbnail">
-						<!--<img src=${player.logo}>-->
-						<p>#player pic</p>
-						<div class="caption text-center">
-							<a onclick=onclickPlayerName(this) data-url=${playerUrl}>
-								<p>${player.player_name}</p>
-							</a>
-							<p>points: ${player.prediction.statistics.points}</p>
-							<p>rebounds: ${player.prediction.statistics.rebounds}</p>
-							<p>assists: ${player.prediction.statistics.assists}</p>
-							<p>blocks: ${player.prediction.statistics.blocks}</p>
-							<p>steals: ${player.prediction.statistics.steals}</p>
-							<p>turnovers: ${player.prediction.statistics.turnovers}</p>
+						<div class="row">
+							<div class="col-sm-4">
+								<img src=${player.picture}>
+								<div>&nbsp;</div>
+								<a onclick=onclickPlayerName(this) data-url=${playerUrl}>
+										<p>${player.player_name}</p>
+								</a>
+							</div>
+							<div class="col-sm-8">
+								<div class="caption text-center">
+									<p>points: ${player.prediction.statistics.points}</p>
+									<p>rebounds: ${player.prediction.statistics.rebounds}</p>
+									<p>assists: ${player.prediction.statistics.assists}</p>
+									<p>blocks: ${player.prediction.statistics.blocks}</p>
+									<p>steals: ${player.prediction.statistics.steals}</p>
+									<p>turnovers: ${player.prediction.statistics.turnovers}</p>
+								</div>
+							</div>
 						</div>
 					</div>
 	`;
 	
 }
-
+/*
 function displayMIP(player){
 	 const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
 
@@ -149,6 +155,7 @@ function displaycoach(coach){
 					</div>
         `;
 }
+*/
 
 function displayTeam(team,name){
 	 const teamUrl = `http://localhost:5000/api/team/${team}`;
