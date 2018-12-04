@@ -2,7 +2,7 @@ function displayTeamProfile(response){
 	
 		return `
 		<style>
-			.table{
+			#table1{
 					background-color:lightsteelblue;
 			}
 			#data{
@@ -16,7 +16,7 @@ function displayTeamProfile(response){
 						<img src=${response.logo}>
 					</div>
 					<div class="col-sm-4">
-						<table class="table">
+						<table id="table1" class="table">
 							<tr>
 								<th scope="col">Location</th>
 								<th scope="col">Stadium</th>

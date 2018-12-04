@@ -1,18 +1,50 @@
-function scheduleTemplate() {
+function scheduleTemplate(response) {
     return `
+			<style>
+				#schedule{
+						background-color:darkseagreen;
+					
+				}
+			</style>
             <div id="data" class="container text-center">
                 <h2>Schedule</h2>
                 <p>&nbsp;</p>
                 <!--<ul id="schedule_list" class="media-list">
 				</ul>-->
-				<div class="col-sm-4">
+				<div class="col-sm-4" style="text-align:right;">
 					<ul id="teamA_list" class="media-list"></ul>
 				</div>
 				<div class="col-sm-4">
+					<p>&nbsp;</p>
 					<img src="img/VS.png" height="80" width="70">
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4" style="text-align:left;">
 					<ul id="teamB_list" class="media-list"></ul>
+				</div>
+				<p>&nbsp;</p>
+				<div class="row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-4">
+					<table class="table" id="schedule">
+						<tr>
+							<td width=100px>Date:</td>
+							<td>${response.date}</td>
+						</tr>
+						<tr>
+							<td>Time:</td>
+							<td>${response.start_time_ET}</td>
+						</tr>
+						<tr>
+							<td>Home:</td>
+							<td>${response.home}</td>
+						</tr>
+						<tr>
+							<td>Visitor:</td>
+							<td>${response.visitor}</td>
+						</tr>
+					</table>
+					</div>
 				</div>
             </div>
     `
@@ -28,10 +60,11 @@ function scheduleListDataTemplate(team) {
     return `
             <li class="media">
                 <div>
-                    <p>#teampic</p>
+                    <img src=${team.logo}>
                 </div>
+				<p>&nbsp;</p>
                 <div>
-                    <p>${team.team_name}</p>
+                    <h4>${team.team_name}</h4>
                 </div>
             </li>
         `;
