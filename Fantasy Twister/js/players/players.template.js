@@ -3,8 +3,28 @@ function playerListTemplate() {
             <div id="data" class="container text-center">
                 <h2>Players</h2>
                 <p>&nbsp;</p>
+                <nav aria-label="Page navigation">
+                  <ul  id="alpha_list" class="pagination">
+                    <!--<li>-->
+                      <!--<a href="#" aria-label="Previous">-->
+                        <!--<span aria-hidden="true">&laquo;</span>-->
+                      <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="#" aria-label="Next">-->
+                        <!--<span aria-hidden="true">&raquo;</span>-->
+                      <!--</a>-->
+                    <!--</li>-->
+                  </ul>
+                </nav>
                 <ul id="player_list" class="media-list"></ul>
             </div>
+    `
+}
+
+function initialListTemplate(initial) {
+    return `
+        <li><a onclick="navToPlayersPage('${initial}')" >${initial}</a></li>
     `
 }
 
