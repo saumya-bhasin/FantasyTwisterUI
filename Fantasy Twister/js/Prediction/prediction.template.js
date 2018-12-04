@@ -8,33 +8,28 @@ function predictionTemplate() {
 					<div class="row">
 						<p id="champion"></p>
 					</div>
-					&nbsp;
+					<div class="row">
+						<div class="col-sm-4">
+						</div>
+						<div class="col-sm-5">
+							<p id="MVP"></p>
+						</div>
+						<div class="col-sm-3">
+						</div>
+					</div>
 					<div class="row">
 						<div class="col-sm-6">
-							<h4>East team to playoffs</h3>
+							<h3>East team to playoffs</h3>
 							<div class="thumbnail">
 								<p id="east_playoffs"></p>
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<h4>West team to playoffs</h3>
+							<h3>West team to playoffs</h3>
 							<div class="thumbnail">
 								<p id="west_playoffs"></p>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<p id="MVP"></p>
-						</div>
-						<div class="col-sm-6">
-							<p id="MIP"></p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3">
-						<p id="coach"></p>
-						</div>					
 					</div>
             </div>
     `
@@ -48,8 +43,19 @@ function displayChampion(champion1,champion2,champion3) {
 
 	
     return `
+			<div class="col-sm-4">
+				<h3>Final Champion</h3>
+					<div class="thumbnail">
+						<img src=${champion3.logo}>
+						<div class="caption">
+							<a onclick=onclickTeamName(this) data-url=${team3Url}>
+								<p>${champion3.team_name}</p>
+							</a>
+						</div>
+					</div>
+			</div>
             <div class="col-sm-4">
-				<h4>East Champion</h4>
+				<h3>East Champion</h3>
 					<div class="thumbnail">
 						<img src=${champion1.logo}>
 						<div class="caption">
@@ -61,7 +67,7 @@ function displayChampion(champion1,champion2,champion3) {
 			</div>
 			
 			<div class="col-sm-4">
-				<h4>West Champion</h4>
+				<h3>West Champion</h3>
 					<div class="thumbnail">
 						<img src=${champion2.logo}>
 						<div class="caption">
@@ -71,17 +77,7 @@ function displayChampion(champion1,champion2,champion3) {
 						</div>
 					</div>
 			</div>
-			<div class="col-sm-4">
-				<h4>Final Champion</h4>
-					<div class="thumbnail">
-						<img src=${champion3.logo}>
-						<div class="caption">
-							<a onclick=onclickTeamName(this) data-url=${team3Url}>
-								<p>${champion3.team_name}</p>
-							</a>
-						</div>
-					</div>
-			</div>
+			
     `
 }
 
@@ -89,24 +85,55 @@ function displayMVP(player){
     const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
 
 	return `
+			<style>
+				.table-borderless > tbody > tr > td,
+				.table-borderless > tbody > tr > th,
+				.table-borderless > tfoot > tr > td,
+				.table-borderless > tfoot > tr > th,
+				.table-borderless > thead > tr > td,
+				.table-borderless > thead > tr > th {
+					border: none;
+				}
+			</style>
 				<h3>MVP</h3>
 					<div class="thumbnail">
 						<div class="row">
-							<div class="col-sm-4">
+							<p>&nbsp;</p>
+							<div class="col-sm-6" style="text-align:center;">
 								<img src=${player.picture}>
 								<div>&nbsp;</div>
 								<a onclick=onclickPlayerName(this) data-url=${playerUrl}>
 										<p>${player.player_name}</p>
 								</a>
 							</div>
-							<div class="col-sm-8">
+							<div class="col-sm-6">
 								<div class="caption text-center">
-									<p>points: ${player.prediction.statistics.points}</p>
-									<p>rebounds: ${player.prediction.statistics.rebounds}</p>
-									<p>assists: ${player.prediction.statistics.assists}</p>
-									<p>blocks: ${player.prediction.statistics.blocks}</p>
-									<p>steals: ${player.prediction.statistics.steals}</p>
-									<p>turnovers: ${player.prediction.statistics.turnovers}</p>
+									<table class="table table-borderless" id="schedule">
+										<tr>
+											<td width=100px>Points:</td>
+											<td>${player.prediction.statistics.points}</td>
+										</tr>
+										<tr>
+											<td>Rebounds:</td>
+											<td>${player.prediction.statistics.rebounds}</td>
+										</tr>
+										<tr>
+											<td>Assists:</td>
+											<td>${player.prediction.statistics.assists}</td>
+										</tr>
+										<tr>
+											<td>Blocks:</td>
+											<td>${player.prediction.statistics.blocks}</td>
+										</tr>
+										<tr>
+											<td>Steals:</td>
+											<td>${player.prediction.statistics.steals}</td>
+										</tr>
+										<tr>
+											<td>Turnovers:</td>
+											<td>${player.prediction.statistics.turnovers}</td>
+										</tr>
+									</table>
 								</div>
 							</div>
 						</div>
