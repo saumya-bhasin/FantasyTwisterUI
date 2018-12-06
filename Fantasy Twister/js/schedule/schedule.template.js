@@ -39,7 +39,6 @@ function scheduleTemplate(response) {
 					<table class="table" id="schedule">
 						<tr>
 							<td width=100px>Date:</td>
-							<!-- <td>${response.date}</td> -->
 						</tr>
 						<tr>
 							<td>Time:</td>

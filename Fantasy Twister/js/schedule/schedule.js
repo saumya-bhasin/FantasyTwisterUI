@@ -9,7 +9,7 @@ function getSchedulesData(date) {
     $.ajax({
         type:'GET',
         //TODO: correct api, date		
-        url: "x" + date,
+        url: "http://127.0.0.1:5000/api/schedule/" + date,
     }).done(function(data) {
         val=JSON.parse(data);
 
