@@ -15,9 +15,9 @@ function getPredictionsData() {
         renderPridictionList(val.data);
     });
 }
-1
+
 function renderPridictionList(predictionData) {
-    //console.log(predictionData)
+    console.log(predictionData);
     $("#prediction_list").append(`<div>
     <!--${predictionData.champion.final_champion.team_name}-->
     </div>`);
@@ -34,21 +34,20 @@ function renderPridictionList(predictionData) {
 
 function renderChampions(allchampions) {
     $("#champion").append(displayChampion(allchampions.east_champion,allchampions.west_champion,allchampions.final_champion));
-
 }
 
 function renderMVP(player){
 	$("#MVP").append(displayMVP(player));	
 }
 
-function renderMIP(player){
-	$("#MIP").append(displayMIP(player));	
-}
-
-function rendercoach(coach){
-	$('#coach').append(displaycoach(coach));
-	
-}
+// function renderMIP(player){
+// 	$("#MIP").append(displayMIP(player));
+// }
+//
+// function rendercoach(coach){
+// 	$('#coach').append(displaycoach(coach));
+//
+// }
 
 function renderEast(candidates){	
 	candidates.forEach((team) => {

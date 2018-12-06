@@ -3,12 +3,21 @@ function scheduleTemplate(response) {
 			<style>
 				#schedule{
 						background-color:darkseagreen;
-					
 				}
 			</style>
             <div id="data" class="container text-center">
                 <h2>Schedule</h2>
                 <p>&nbsp;</p>
+                <nav aria-label="...">
+                  <ul class="pager">
+                    <li class="previous"><a onclick="navToSchedulePage(getPreviousDate(response.date))" href="#"><span aria-hidden="true">&larr;</span> Previous Date</a></li>
+                    <li><a onclick="navToSchedulePage(getCurrentDate())" href="#"><span aria-hidden="true">&larr;</span>Today</a></li>
+                    <li class="next"><a onclick="navToSchedulePage(getNextDate(response.date))" href="#">Next Date <span aria-hidden="true">&rarr;</span></a></li>
+                  </ul>
+                </nav>
+                <!--<li><a onclick="navToSchedulePage(-1)" >Previous Date</a></li>-->
+                <!--<li><a onclick="navToSchedulePage(0)" >Today</a></li>-->
+                <!--<li><a onclick="navToSchedulePage(+1)" >Next Date</a></li>-->
                 <!--<ul id="schedule_list" class="media-list">
 				</ul>-->
 				<div class="col-sm-4" style="text-align:right;">

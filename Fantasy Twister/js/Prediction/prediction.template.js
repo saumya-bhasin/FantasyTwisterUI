@@ -83,6 +83,7 @@ function displayChampion(champion1,champion2,champion3) {
 
 function displayMVP(player){
     const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
+    console.log("displayMVP:", player.player_name);
 
 	return `
 			<style>

@@ -1,11 +1,10 @@
-function navToSchedulePage() {
+function navToSchedulePage(date) {
     console.log('coming here');
     emptyContent();
-    getSchedulesData();
+    getSchedulesData(date);
 };
 
-function getSchedulesData() {
-	date=getDate();
+function getSchedulesData(date) {
 	
     $.ajax({
         type:'GET',
@@ -34,17 +33,42 @@ function renderScheduleList(schedulesData) {
 }
 
 
-function getDate(){
+function getCurrentDate(){
 	var today = new Date();
 	var dd = today.getDate();
 	var mm = today.getMonth()+1; //January is 0!
 	var yyyy = today.getFullYear();
-	if(dd<10) {
-		dd = '0'+dd
-	}
+	// if(dd<10) {
+	// 	dd = '0'+dd
+	// }
 	if(mm<10) {
 		mm = '0'+mm
-	}	
+	}
 	today = yyyy + "-" + mm + "-" + dd;	
 	return today
-} 
+}
+
+// function getDate(diff){
+//     var date = date.setDate(date.getDate() + diff);
+//     var dd = date.getDate();
+//     var mm = date.getMonth()+1; //January is 0!
+//     var yyyy = date.getFullYear();
+//     // if(dd<10) {
+//     // 	dd = '0'+dd
+//     // }
+//     if(mm<10) {
+//         mm = '0'+mm
+//     }
+//     dateStr = yyyy + "-" + mm + "-" + dd;
+//     return dateStr
+// }
+
+function getPreviousDate(curDate){
+//
+    return preDate
+}
+
+function getNextDate(curDate){
+//
+    return preDate
+}
