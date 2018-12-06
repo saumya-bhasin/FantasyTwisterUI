@@ -18,9 +18,7 @@ function getPredictionsData() {
 
 function renderPridictionList(predictionData) {
     console.log(predictionData);
-    $("#prediction_list").append(`<div>
-    <!--${predictionData.champion.final_champion.team_name}-->
-    </div>`);
+    $("#prediction_list").append();
 	
 	console.log(predictionData.champion);
 	renderChampions(predictionData.champion);

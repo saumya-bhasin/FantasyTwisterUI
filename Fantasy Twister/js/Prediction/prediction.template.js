@@ -109,36 +109,7 @@ function displayMVP(player){
 										<p>${player.player_name}</p>
 								</a>
 							</div>
-							<!--<div class="col-sm-6">
-								<div class="caption text-center">
-									<table class="table table-borderless" id="schedule">
-										// <tr>
-										// 	<td width=100px>Points:</td>
-										// 	<td>${player.prediction.statistics.points}</td>
-										// </tr>
-										// <tr>
-										// 	<td>Rebounds:</td>
-										// 	<td>${player.prediction.statistics.rebounds}</td>
-										// </tr>
-										// <tr>
-										// 	<td>Assists:</td>
-										// 	<td>${player.prediction.statistics.assists}</td>
-										// </tr>
-										// <tr>
-										// 	<td>Blocks:</td>
-										// 	<td>${player.prediction.statistics.blocks}</td>
-										// </tr>
-										// <tr>
-										// 	<td>Steals:</td>
-										// 	<td>${player.prediction.statistics.steals}</td>
-										// </tr>
-										// <tr>
-										// 	<td>Turnovers:</td>
-										// 	<td>${player.prediction.statistics.turnovers}</td>
-										// </tr>
-									</table>
-								</div>
-							</div>-->
+							
 						</div>
 					</div>
 	`;
