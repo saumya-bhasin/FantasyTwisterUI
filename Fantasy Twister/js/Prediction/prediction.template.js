@@ -100,6 +100,8 @@ function displayMVP(player){
 					<div class="thumbnail">
 						<div class="row">
 							<p>&nbsp;</p>
+							<div class="col-sm-3" style="text-align:center;">
+							</div>
 							<div class="col-sm-6" style="text-align:center;">
 								<img src=${player.picture}>
 								<div>&nbsp;</div>
