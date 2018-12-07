@@ -91,6 +91,10 @@ body{
 }
 
 .player-list-item-body {
-    padding: 0 80px;
+    /*padding: 0 80px;*/
     width: auto;
+}
+
+.media-left, .media>.pull-left {
+    padding-right: 100px;
 }
