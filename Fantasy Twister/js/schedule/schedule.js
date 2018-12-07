@@ -1,15 +1,17 @@
-function navToSchedulePage(date) {
+diff = 0
+
+function navToSchedulePage() {
     console.log('coming here');
     emptyContent();
-    getSchedulesData(date);
+    getSchedulesData();
 };
 
-function getSchedulesData(date) {
+function getSchedulesData() {
 	
     $.ajax({
         type:'GET',
         //TODO: correct api, date		
-        url: "http://127.0.0.1:5000/api/schedule/" + date,
+        url: "http://127.0.0.1:5000/api/schedule/" + getDate(diff),
     }).done(function(data) {
         val=JSON.parse(data);
 
@@ -48,27 +50,33 @@ function getCurrentDate(){
 	return today
 }
 
-// function getDate(diff){
-//     var date = date.setDate(date.getDate() + diff);
-//     var dd = date.getDate();
-//     var mm = date.getMonth()+1; //January is 0!
-//     var yyyy = date.getFullYear();
-//     // if(dd<10) {
-//     // 	dd = '0'+dd
-//     // }
-//     if(mm<10) {
-//         mm = '0'+mm
-//     }
-//     dateStr = yyyy + "-" + mm + "-" + dd;
-//     return dateStr
-// }
-
-function getPreviousDate(curDate){
-//
-    return preDate
+function getDate(diff){
+    var date = new Date();
+    date.setDate(date.getDate() + diff);
+    var dd = date.getDate();
+    var mm = date.getMonth()+1; //January is 0!
+    var yyyy = date.getFullYear();
+    // if(dd<10) {
+    // 	dd = '0'+dd
+    // }
+    if(mm<10) {
+        mm = '0'+mm
+    }
+    dateStr = yyyy + "-" + mm + "-" + dd;
+    return dateStr
 }
 
-function getNextDate(curDate){
-//
-    return preDate
+function getPreviousDate(){
+    diff -= 1;
+    return getDate(diff)
+}
+
+function getNextDate(){
+    diff += 1;
+    return getDate(diff)
+}
+
+function getCurDate(){
+    diff = 0;
+    return getDate(diff)
 }

@@ -17,9 +17,8 @@ function getPlayer(players){
     }).done(function(data) {
         value=JSON.parse(data);
 		//renderTeam(team,value.data.team_name)
-		console.log("candidates "+value.data);		
-		$("#ppic").append(displaypic(value.data));
-		$("#pname").append(displayname(value.data));
+		console.log("candidates "+value.data);
+		$("#player_team").append(displayTeamPlayer(value.data));
 
     });
     });

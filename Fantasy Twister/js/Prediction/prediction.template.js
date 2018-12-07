@@ -1,30 +1,35 @@
 function predictionTemplate() {
     return `
             <div id="data" class="container text-center">
-                <h1>Predictions</h1>
                 <p>&nbsp;</p>
+                <h1>Predictions</h1>
                 <ul id="prediction_list" class="media-list">
 				</ul>
 					<div class="row">
-						<p id="champion"></p>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-6">
 							<p id="MVP"></p>
 						</div>
 						<div class="col-sm-3">
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-6">
+						<p id="champion"></p>
+					</div>
+					
+					<div class="row">
+						<div class="col-sm-2">
+						</div>
+						<div class="col-sm-4">
 							<h3>East team to playoffs</h3>
 							<div class="thumbnail">
 								<p id="east_playoffs"></p>
 							</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-1">
+						</div>
+						<div class="col-sm-4">
 							<h3>West team to playoffs</h3>
 							<div class="thumbnail">
 								<p id="west_playoffs"></p>
@@ -115,48 +120,6 @@ function displayMVP(player){
 	`;
 	
 }
-/*
-function displayMIP(player){
-	 const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
-
-	return `
-				<h3>MIP</h3>
-					<div class="thumbnail">
-						<!--<img src=${player.logo}>-->
-						<p>#player pic</p>
-						<div class="caption text-center">
-							<a onclick=onclickPlayerName(this) data-url=${playerUrl}>
-								<p>${player.player_name}</p>
-							</a>
-							<p>points: ${player.prediction.statistics.points}</p>
-							<p>rebounds: ${player.prediction.statistics.rebounds}</p>
-							<p>assists: ${player.prediction.statistics.assists}</p>
-							<p>blocks: ${player.prediction.statistics.blocks}</p>
-							<p>steals: ${player.prediction.statistics.steals}</p>
-							<p>turnovers: ${player.prediction.statistics.turnovers}</p>
-						</div>
-					</div>
-		`;
-	
-}
-
-function displaycoach(coach){
-	const team1Url = `http://localhost:5000/api/team/${coach.team_id}`;
-
-	return `
-				<h3>Coach of the Year</h3>
-					<div class="thumbnail">
-						<img src=${coach.coach_photo}>
-						<div class="caption text-center">
-							<h4>${coach.coach_name}</h4>
-							<a onclick=onclickTeamName(this) data-url=${team1Url}>
-								<p>${coach.team_name}</p>
-							</a>
-						</div>
-					</div>
-        `;
-}
-*/
 
 function displayTeam(team,name){
 	 const teamUrl = `http://localhost:5000/api/team/${team}`;
@@ -169,18 +132,4 @@ function displayTeam(team,name){
 						</div>
         `;
 	
-}
-
-
-function predictionListDataTemplate(champion) {	
-	    return `
-				<li class="media">
-					<div class="media-left">
-						<p>${champion.logo}</p>
-					</div>
-					<div class="media-body">
-						<p>${champion.team_name}</p>
-					</div>
-				</li>
-        `;
 }

@@ -8,15 +8,10 @@ function carouselTemplate() {
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-			<img src="img/slide1.jpg">
-			<!--<div class="carousel-caption">
-				<h1>get to know bootstrap</h1>
-				<br>
-				<button type="button" class="btn btn-default">Get Started</button>
-			</div>-->
+			<img src="img/slide0.jpg">
 			</div>
 			<div class="item">
-				<img src="img/slide2.jpg">
+				<img src="img/slide1.jpg">
 			</div>
 			<div class="item">
 				<img src="img/slide2.jpg">
@@ -38,25 +33,26 @@ function carouselTemplate() {
 function highLightsTemplate() {
   return `
     	<div id="data" class="container text-center">
-		<h2>HighLights</h2>
-		<p>&nbsp;</p>
-		<div class="row">
-			<div class="col-sm-6">
-				<h3>Top Players</h3>
-				<ul id="player_list" class="media-list"></ul>
-			</div>
-			<div class="col-sm-6">
-				<h3>Top Teams</h3>
-				<ul id="team_list" class="list-unstyled"></ul>
-			</div>
-		</div>
-	</div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>&nbsp;</p>
+                    <h2>Top Players</h2>
+                    <p>&nbsp;</p>
+                    <ul id="player_list" class="media-list"></ul>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Top Teams</h2>
+                    <p>&nbsp;</p>
+                    <ul id="team_list" class="list-unstyled"></ul>
+                </div>
+            </div>
+	    </div>
   `;
 };
 
 function topPlayerTemplate(player) {
-    const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
-    const teamUrl = `http://localhost:5000/api/team/${player.team_id}`;
+    const playerUrl = `http://127.0.0.1:5000/api/player/${player.player_id}`;
+    const teamUrl = `http://127.0.0.1:5000/api/team/${player.team_id}`;
     const imageAlt = `${player.player_name}'s profile picture`;
 
     return `
@@ -77,7 +73,7 @@ function topPlayerTemplate(player) {
 }
 
 function topTeamTemplate(team) {
-    const teamUrl = `http://localhost:5000/api/team/${team.team_id}`;
+    const teamUrl = `http://127.0.0.1:5000/api/team/${team.team_id}`;
     const imageAlt = `${team.team_name}'s logo`;
 
     return `

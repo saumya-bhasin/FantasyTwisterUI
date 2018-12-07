@@ -8,7 +8,6 @@ function navToPlayersPage(initial) {
 function getPlayersData(initial) {
     $.ajax({
         type:'GET',
-        //TODO: correct api
         url: "http://127.0.0.1:5000/api/players/" + initial,
     }).done(function(data) {
         val=JSON.parse(data);
@@ -18,6 +17,7 @@ function getPlayersData(initial) {
 
 function renderPlayerList(playersData) {
     playersData.forEach((player) => {
+        $("#player_list").append(`<div className="col-sm-3"> </div>`);
         $("#player_list").append(topPlayerTemplate(player));
     });
 }
