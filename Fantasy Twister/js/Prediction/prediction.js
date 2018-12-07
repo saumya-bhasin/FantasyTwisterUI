@@ -63,10 +63,3 @@ function renderWest(candidates){
     });
 	
 }
-
-// function onclickTeamName(targetElem) {
-//     const teamUrl = targetElem.getAttribute('data-url');
-//     $.get(teamUrl, function(response) {
-//         navToTeamProfile(response);
-//     });
-// }

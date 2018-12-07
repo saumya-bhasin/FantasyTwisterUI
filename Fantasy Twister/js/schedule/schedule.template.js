@@ -1,5 +1,7 @@
 function scheduleTemplate(response) {
-    console.log
+    const teamAUrl = `http://127.0.0.1:5000/api/team/${response.teamA.team_id}`;
+    const teamBUrl = `http://127.0.0.1:5000/api/team/${response.teamB.team_id}`;
+
     return `
 			<style>
 				#schedule{
@@ -48,11 +50,11 @@ function scheduleTemplate(response) {
 						</tr>
 						<tr>
 							<td>Home:</td>
-							<td>${response.home}</td>
+                            <td><a onclick=onclickTeamName(this) data-url=${teamAUrl}>${response.home}</a></td>
 						</tr>
 						<tr>
 							<td>Visitor:</td>
-							<td>${response.visitor}</td>
+                            <td><a onclick=onclickTeamName(this) data-url=${teamBUrl}>${response.visitor}</a></td>
 						</tr>
 						<tr>
 					        <td>Winner:</td>
@@ -74,17 +76,21 @@ function scheduleListDataTemplate(team) {
 	
 	console.log(team);
 	
-	//const teamUrl = `http://localhost:5000/api/team/${schedule.team_id}`;
-    //const imageAlt = `${schedule.team_name}'s logo`;
+	const teamUrl = `http://127.0.0.1:5000/api/team/${team.team_id}`;
+    const imageAlt = `${team.team_name}'s logo`;
 
     return `
             <li class="media">
                 <div>
-                    <img src=${team.logo} class="img-thumbnail">
+                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>
+                        <img class="img-thumbnail" src=${team.logo} alt=${imageAlt}>
+                    </a>                   
                 </div>
 				<p>&nbsp;</p>
                 <div>
-                    <h4>${team.team_name}</h4>
+                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>
+                        <h4>${team.team_name}</h4>
+                    </a>
                 </div>
             </li>
         `;

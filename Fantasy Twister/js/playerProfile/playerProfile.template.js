@@ -1,5 +1,5 @@
 function displayPlayer(response){
-	
+	const teamUrl = `http://127.0.0.1:5000/api/team/${response.team_id}`;
 	return `
 	<style>
 		.table{
@@ -29,7 +29,7 @@ function displayPlayer(response){
 						<table class="table table-striped">
 							<tr>
 								<td width=150px>Team Name:</td>
-								<td>${response.team_name}</td>
+								<td><a onclick=onclickTeamName(this) data-url=${teamUrl}>${response.team_name}</a></td>
 							</tr>
 							<tr>
 								<td>Position:</td>
