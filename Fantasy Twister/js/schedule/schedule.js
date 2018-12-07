@@ -15,8 +15,14 @@ function getSchedulesData() {
     }).done(function(data) {
         val=JSON.parse(data);
 
-		$('#content').append(scheduleTemplate(val.data.details[0]));
-		renderScheduleList(val.data);
+        val.data.details.forEach((detail) => {
+            // $("#player_list").append(topPlayerTemplate(player));
+            $('#content').append(scheduleTemplate(detail));
+            renderScheduleList(detail);
+        });
+
+		// $('#content').append(scheduleTemplate(detail));
+		// renderScheduleList(val.data);
 
     });
 }
@@ -30,8 +36,8 @@ function renderScheduleList(schedulesData) {
 	
 	//console.log("*************** "+schedulesData.details[0].teamA.team_name);
 	
-	$("#teamA_list").append(scheduleListDataTemplate(schedulesData.details[0].teamA));
-	$("#teamB_list").append(scheduleListDataTemplate(schedulesData.details[0].teamB));
+	$("#teamA_list").append(scheduleListDataTemplate(schedulesData.teamA));
+	$("#teamB_list").append(scheduleListDataTemplate(schedulesData.teamB));
 }
 
 
