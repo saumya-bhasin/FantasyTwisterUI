@@ -84,3 +84,13 @@ body{
   height: 50px;
   margin-top: -50px;
 }
+
+.player-list-item {
+    display: flex;
+    justify-content: center;
+}
+
+.player-list-item-body {
+    padding: 0 80px;
+    width: auto;
+}

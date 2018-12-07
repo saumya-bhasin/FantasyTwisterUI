@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3d303f0-8ebd-436f-83ad-25f27debc50f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/Prediction/prediction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/Prediction/prediction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/Prediction/prediction.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/Prediction/prediction.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/playerProfile/playerProfile.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/playerProfile/playerProfile.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/schedule/schedule.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/schedule/schedule.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fantasy Twister/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/home/home.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/home/home.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,27 +20,87 @@
     <session id="-679784165">
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="62" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="114" />
-          <entry key="JavaScript" value="995" />
+          <entry key="CSS" value="116" />
+          <entry key="HTML" value="116" />
+          <entry key="JavaScript" value="1147" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fantasy Twister/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/home/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/home/home.template.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="69" />
+            <state relative-caret-position="538">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
               <folding>
+                <element signature="e#144#150#1" expanded="true" />
                 <element signature="e#219#225#1" expanded="true" />
+                <element signature="e#377#383#1" expanded="true" />
+                <element signature="e#420#426#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fantasy Twister/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/players/players.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -51,7 +111,6 @@
     <findStrings>
       <find>navToPlayerProfile</find>
       <find>highLightsTemplatehighLightsTemplate</find>
-      <find>player_list</find>
       <find>highLightsTemplate</find>
       <find>playerListTemplate</find>
       <find>navToPlayersPage</find>
@@ -62,6 +121,8 @@
       <find>displayMVP</find>
       <find>date</find>
       <find>color</find>
+      <find>onclickPlayerName</find>
+      <find>player_list</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,7 +132,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Fantasy Twister/html/profile.html" />
-        <option value="$PROJECT_DIR$/Fantasy Twister/css/main.css" />
         <option value="$PROJECT_DIR$/Fantasy Twister/html/players.html" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/main.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/home/home.js" />
@@ -80,15 +140,16 @@
         <option value="$PROJECT_DIR$/Fantasy Twister/js/teams/teams.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/teams/teams.template.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/players/players.js" />
-        <option value="$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/playerProfile/playerProfile.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.js" />
-        <option value="$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/Prediction/prediction.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/Prediction/prediction.template.js" />
-        <option value="$PROJECT_DIR$/Fantasy Twister/js/home/home.template.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/schedule/schedule.template.js" />
         <option value="$PROJECT_DIR$/Fantasy Twister/js/playerProfile/playerProfile.template.js" />
+        <option value="$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js" />
+        <option value="$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js" />
+        <option value="$PROJECT_DIR$/Fantasy Twister/css/main.css" />
+        <option value="$PROJECT_DIR$/Fantasy Twister/js/home/home.template.js" />
       </list>
     </option>
   </component>
@@ -241,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55420000" />
+    <option name="totallyTimeSpent" value="57109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -294,13 +355,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Fantasy Twister/html/profile.html" />
     <entry file="file://$PROJECT_DIR$/Fantasy Twister/html/players.html" />
-    <entry file="file://$PROJECT_DIR$/Fantasy Twister/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -312,27 +366,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fantasy Twister/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/players/players.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -364,26 +397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding>
-            <element signature="e#177#183#1" expanded="true" />
-            <element signature="e#226#232#1" expanded="true" />
-            <element signature="e#393#399#1" expanded="true" />
-            <element signature="e#411#417#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -425,12 +438,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/players/players.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fantasy Twister/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/players/players.template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/teamProfile/teamProfile.template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fantasy Twister/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Fantasy Twister/js/home/home.template.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="69" />
+        <state relative-caret-position="538">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
           <folding>
+            <element signature="e#144#150#1" expanded="true" />
             <element signature="e#219#225#1" expanded="true" />
+            <element signature="e#377#383#1" expanded="true" />
+            <element signature="e#420#426#1" expanded="true" />
           </folding>
         </state>
       </provider>

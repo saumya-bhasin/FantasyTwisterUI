@@ -67,17 +67,18 @@ function displayTeamProfile(response){
 }
 
 function displayTeamPlayer(player){
+    console.log('displayTeamPlayer');
     const playerUrl = `http://127.0.0.1:5000/api/player/${player.player_id}`;
     const imageAlt = `${player.player_name}'s profile picture`;
 
     return `
-            <li class="media">
+            <li class="media player-list-item">
                 <div class="media-left">
                     <a onclick=onclickPlayerName(this) data-url=${playerUrl}>
                         <img class="media-object" src=${player.picture} alt=${imageAlt}>
                     </a>
                 </div>
-                <div class="media-body">
+                <div class="media-body  player-list-item-body">
                     <a onclick=onclickPlayerName(this) data-url=${playerUrl}>
                         <h4 class="media-heading">${player.player_name}</h4>
                     </a>

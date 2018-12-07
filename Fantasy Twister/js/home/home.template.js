@@ -41,6 +41,7 @@ function highLightsTemplate() {
                     <ul id="player_list" class="media-list"></ul>
                 </div>
                 <div class="col-sm-6">
+                    <p>&nbsp;</p>
                     <h2>Top Teams</h2>
                     <p>&nbsp;</p>
                     <ul id="team_list" class="list-unstyled"></ul>
@@ -51,18 +52,19 @@ function highLightsTemplate() {
 };
 
 function topPlayerTemplate(player) {
+    console.log('coming here topPlayerTemplate');
     const playerUrl = `http://127.0.0.1:5000/api/player/${player.player_id}`;
     const teamUrl = `http://127.0.0.1:5000/api/team/${player.team_id}`;
     const imageAlt = `${player.player_name}'s profile picture`;
 
     return `
-            <li class="media">
+            <li class="media player-list-item">
                 <div class="media-left">
                     <a onclick=onclickPlayerName(this) data-url=${playerUrl}>
                         <img class="media-object" src=${player.picture} alt=${imageAlt}>
                     </a>
                 </div>
-                <div class="media-body">
+                <div class="media-body player-list-item-body">
                     <a onclick=onclickPlayerName(this) data-url=${playerUrl}>
                         <h4 class="media-heading">${player.player_name}</h4>
                     </a>
@@ -77,13 +79,13 @@ function topTeamTemplate(team) {
     const imageAlt = `${team.team_name}'s logo`;
 
     return `
-            <li class="media">
+            <li class="media player-list-item">
                 <div class="media-left">
                     <a onclick=onclickTeamName(this) data-url=${teamUrl}>
                         <img class="media-object" src=${team.logo} alt=${imageAlt}>
                     </a>
                 </div>
-                <div class="media-body">
+                <div class="media-body player-list-item-body">
                     <a onclick=onclickTeamName(this) data-url=${teamUrl}>
                         <h4 class="media-heading">${team.team_name}</h4>
                     </a>

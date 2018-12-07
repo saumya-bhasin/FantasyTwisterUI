@@ -20,6 +20,7 @@ function initialListTemplate(initial) {
 }
 
 function playersTemplate(player) {
+    console.log('coming here playersTemplate');
     //TODO
     const playerUrl = `http://localhost:5000/api/player/${player.player_id}`;
     const teamUrl = `http://localhost:5000/api/team/${player.team_id}`;
