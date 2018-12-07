@@ -11,16 +11,17 @@ function scheduleTemplate(response) {
             <div id="data" class="container text-center">
                 <p>&nbsp;</p>
                 <h2>Schedule</h2>
-                <p>&nbsp;</p>
                 
                 <nav aria-label="...">
                   <ul class="pager">
                     <li class="previous"><a onclick="navToSchedulePage(getPreviousDate())" href="#"><span aria-hidden="true">&larr;</span> Previous Date</a></li>
-                    <li><a onclick="navToSchedulePage(getCurDate())" href="#">Today</a></li>
+                    <li><a onclick="navToSchedulePage(getCurDate())">Today</a></li>
                     <li class="next"><a onclick="navToSchedulePage(getNextDate())" href="#">Next Date <span aria-hidden="true">&rarr;</span></a></li>
                   </ul>
                 </nav>
 				<p>&nbsp;</p>
+				
+				<h3>${response.date}</h3>
 				
 				<div class="col-sm-4" style="text-align:right;">
 					<ul id="teamA_list" class="media-list"></ul>
