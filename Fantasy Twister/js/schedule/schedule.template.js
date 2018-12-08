@@ -1,9 +1,6 @@
-function scheduleTemplate(response) {
-    const teamAUrl = `http://127.0.0.1:5000/api/team/${response.teamA.team_id}`;
-    const teamBUrl = `http://127.0.0.1:5000/api/team/${response.teamB.team_id}`;
-
-    return `
-			<style>
+function scheduleTopTemplate(){
+    return`
+        	<style>
 				#schedule{
 						/*background-color:darkseagreen;*/
 				}
@@ -21,8 +18,18 @@ function scheduleTemplate(response) {
                 </nav>
 				<p>&nbsp;</p>
 				
-				<h3>${response.date}</h3>
-				
+				<h3>${getCurDate()}</h3>
+				<p>&nbsp;</p>
+				<div id="schedule_list"></div>
+            </div>
+    `
+}
+
+function scheduleTemplate(response) {
+    const teamAUrl = `http://127.0.0.1:5000/api/team/${response.teamA.team_id}`;
+    const teamBUrl = `http://127.0.0.1:5000/api/team/${response.teamB.team_id}`;
+
+    return `				
 				<div class="col-sm-4" style="text-align:right;">
 					<ul id="teamA_list" class="media-list"></ul>
 				</div>
@@ -69,7 +76,6 @@ function scheduleTemplate(response) {
 					</div>
 				</div>
 				
-            </div>
     `
 }
 

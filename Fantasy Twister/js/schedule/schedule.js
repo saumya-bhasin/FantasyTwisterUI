@@ -3,6 +3,7 @@ diff = 0
 function navToSchedulePage() {
     console.log('coming here');
     emptyContent();
+    $('#content').append(scheduleTopTemplate());
     getSchedulesData();
 };
 
@@ -16,7 +17,7 @@ function getSchedulesData() {
         console.log("details", val.data.details)
         val.data.details.forEach((detail) => {
             console.log("detail", detail)
-            $('#content').append(scheduleTemplate(detail));
+            $('#schedule_list').append(scheduleTemplate(detail));
             renderScheduleList(detail);
         });
     });
@@ -24,10 +25,10 @@ function getSchedulesData() {
 
 function renderScheduleList(schedulesData) {
     console.log("data "+schedulesData);
-
-    $("#schedule_list").append(`<div>
-    ${schedulesData.visitor}
-    </div>`);
+    //
+    // $("#schedule_list").append(`<div>
+    // ${schedulesData.visitor}
+    // </div>`);
 	
 	//console.log("*************** "+schedulesData.details[0].teamA.team_name);
 	
