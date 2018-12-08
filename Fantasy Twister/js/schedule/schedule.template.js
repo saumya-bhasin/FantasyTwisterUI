@@ -99,6 +99,9 @@ function scheduleTemplate(response) {
 					</table>
 					</div>
 				</div>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
 				
     `
 }
