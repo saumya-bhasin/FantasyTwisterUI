@@ -15,8 +15,9 @@ function getSchedulesData() {
     }).done(function(data) {
         val=JSON.parse(data);
 
-        val.data.details.forEach((detail) => {
+        val.data.details[0].forEach((detail) => {
             // $("#player_list").append(topPlayerTemplate(player));
+            console.log("detail", detail)
             $('#content').append(scheduleTemplate(detail));
             renderScheduleList(detail);
         });
@@ -38,22 +39,6 @@ function renderScheduleList(schedulesData) {
 	
 	$("#teamA_list").append(scheduleListDataTemplate(schedulesData.teamA));
 	$("#teamB_list").append(scheduleListDataTemplate(schedulesData.teamB));
-}
-
-
-function getCurrentDate(){
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-	var yyyy = today.getFullYear();
-	// if(dd<10) {
-	// 	dd = '0'+dd
-	// }
-	if(mm<10) {
-		mm = '0'+mm
-	}
-	today = yyyy + "-" + mm + "-" + dd;	
-	return today
 }
 
 function getDate(diff){
