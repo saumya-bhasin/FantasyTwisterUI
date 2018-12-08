@@ -10,21 +10,15 @@ function getSchedulesData() {
 	
     $.ajax({
         type:'GET',
-        //TODO: correct api, date		
         url: "http://127.0.0.1:5000/api/schedule/" + getDate(diff),
     }).done(function(data) {
         val=JSON.parse(data);
-
-        val.data.details[0].forEach((detail) => {
-            // $("#player_list").append(topPlayerTemplate(player));
+        console.log("details", val.data.details)
+        val.data.details.forEach((detail) => {
             console.log("detail", detail)
             $('#content').append(scheduleTemplate(detail));
             renderScheduleList(detail);
         });
-
-		// $('#content').append(scheduleTemplate(detail));
-		// renderScheduleList(val.data);
-
     });
 }
 
