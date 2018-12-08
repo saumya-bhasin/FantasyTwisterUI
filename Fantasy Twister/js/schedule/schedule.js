@@ -1,17 +1,17 @@
-diff = 0
+var diff = 0;
 
-function navToSchedulePage() {
+function navToSchedulePage(date) {
     console.log('coming here');
     emptyContent();
-    $('#content').append(scheduleTopTemplate());
-    getSchedulesData();
+    $('#content').append(scheduleTopTemplate(date));
+    getSchedulesData(date);
 };
 
-function getSchedulesData() {
+function getSchedulesData(date) {
 	
     $.ajax({
         type:'GET',
-        url: "http://127.0.0.1:5000/api/schedule/" + getDate(diff),
+        url: "http://127.0.0.1:5000/api/schedule/" + date,
     }).done(function(data) {
         val=JSON.parse(data);
         console.log("details", val.data.details)

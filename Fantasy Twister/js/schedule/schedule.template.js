@@ -1,4 +1,4 @@
-function scheduleTopTemplate(){
+function scheduleTopTemplate(date){
     return`
             <div id="data" class="container text-center">
                 <p>&nbsp;</p>
@@ -12,7 +12,7 @@ function scheduleTopTemplate(){
                   </ul>
                 </nav>
 				<p>&nbsp;</p>
-				<h3>${getCurDate()}</h3>
+				<h3>${date}</h3>
 				<p>&nbsp;</p>
 				<div id="schedule_list"></div>
             </div>
