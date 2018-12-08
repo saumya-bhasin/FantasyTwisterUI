@@ -1,10 +1,5 @@
 function scheduleTopTemplate(){
     return`
-        	<style>
-				#schedule{
-						/*background-color:darkseagreen;*/
-				}
-			</style>
             <div id="data" class="container text-center">
                 <p>&nbsp;</p>
                 <h2>Schedule</h2>
@@ -17,7 +12,6 @@ function scheduleTopTemplate(){
                   </ul>
                 </nav>
 				<p>&nbsp;</p>
-				
 				<h3>${getCurDate()}</h3>
 				<p>&nbsp;</p>
 				<div id="schedule_list"></div>
@@ -28,17 +22,47 @@ function scheduleTopTemplate(){
 function scheduleTemplate(response) {
     const teamAUrl = `http://127.0.0.1:5000/api/team/${response.teamA.team_id}`;
     const teamBUrl = `http://127.0.0.1:5000/api/team/${response.teamB.team_id}`;
+    const imageAAlt = `${response.teamA.team_name}'s logo`;
+    const imageBAlt = `${response.teamB.team_name}'s logo`;
 
     return `				
 				<div class="col-sm-4" style="text-align:right;">
-					<ul id="teamA_list" class="media-list"></ul>
+					<ul id="teamA_list" class="media-list">
+                        <li class="media">
+                            <div>
+                                <a onclick=onclickTeamName(this) data-url=${teamAUrl}>
+                                    <img class="img-thumbnail" src=${response.teamA.logo} alt=${imageAAlt}>
+                                </a>                   
+                            </div>
+                            <p>&nbsp;</p>
+                            <div>
+                                <a onclick=onclickTeamName(this) data-url=${teamAUrl}>
+                                    <h4>${response.teamA.team_name}</h4>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
 				</div>
 				<div class="col-sm-4">
 					<p>&nbsp;</p>
 					<img src="img/VS.png" height="80" width="70" class="img-round">
 				</div>
 				<div class="col-sm-4" style="text-align:left;">
-					<ul id="teamB_list" class="media-list"></ul>
+					<ul id="teamB_list" class="media-list">
+					    <li class="media">
+                            <div>
+                                <a onclick=onclickTeamName(this) data-url=${teamBUrl}>
+                                    <img class="img-thumbnail" src=${response.teamB.logo} alt=${imageBAlt}>
+                                </a>                   
+                            </div>
+                            <p>&nbsp;</p>
+                            <div>
+                                <a onclick=onclickTeamName(this) data-url=${teamBUrl}>
+                                    <h4>${response.teamB.team_name}</h4>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
 				</div>
 				<p>&nbsp;</p>
 				
@@ -79,27 +103,27 @@ function scheduleTemplate(response) {
     `
 }
 
-function scheduleListDataTemplate(team) {
-	
-	console.log(team);
-	
-	const teamUrl = `http://127.0.0.1:5000/api/team/${team.team_id}`;
-    const imageAlt = `${team.team_name}'s logo`;
-
-    return `
-            <li class="media">
-                <div>
-                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>
-                        <img class="img-thumbnail" src=${team.logo} alt=${imageAlt}>
-                    </a>                   
-                </div>
-				<p>&nbsp;</p>
-                <div>
-                    <a onclick=onclickTeamName(this) data-url=${teamUrl}>
-                        <h4>${team.team_name}</h4>
-                    </a>
-                </div>
-            </li>
-        `;
-	
-}
+// function scheduleListDataTemplate(team) {
+//
+// 	console.log(team);
+//
+// 	const teamUrl = `http://127.0.0.1:5000/api/team/${team.team_id}`;
+//     const imageAlt = `${team.team_name}'s logo`;
+//
+//     return `
+//             <li class="media">
+//                 <div>
+//                     <a onclick=onclickTeamName(this) data-url=${teamUrl}>
+//                         <img class="img-thumbnail" src=${team.logo} alt=${imageAlt}>
+//                     </a>
+//                 </div>
+// 				<p>&nbsp;</p>
+//                 <div>
+//                     <a onclick=onclickTeamName(this) data-url=${teamUrl}>
+//                         <h4>${team.team_name}</h4>
+//                     </a>
+//                 </div>
+//             </li>
+//         `;
+//
+// }

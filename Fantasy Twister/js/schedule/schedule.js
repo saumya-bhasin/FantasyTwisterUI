@@ -18,23 +18,23 @@ function getSchedulesData() {
         val.data.details.forEach((detail) => {
             console.log("detail", detail)
             $('#schedule_list').append(scheduleTemplate(detail));
-            renderScheduleList(detail);
+            // renderScheduleList(detail);
         });
     });
 }
 
-function renderScheduleList(schedulesData) {
-    console.log("data "+schedulesData);
-    //
-    // $("#schedule_list").append(`<div>
-    // ${schedulesData.visitor}
-    // </div>`);
-	
-	//console.log("*************** "+schedulesData.details[0].teamA.team_name);
-	
-	$("#teamA_list").append(scheduleListDataTemplate(schedulesData.teamA));
-	$("#teamB_list").append(scheduleListDataTemplate(schedulesData.teamB));
-}
+// function renderScheduleList(schedulesData) {
+//     console.log("data "+schedulesData);
+//     //
+//     // $("#schedule_list").append(`<div>
+//     // ${schedulesData.visitor}
+//     // </div>`);
+//
+// 	//console.log("*************** "+schedulesData.details[0].teamA.team_name);
+//
+// 	$("#teamA_list").append(scheduleListDataTemplate(schedulesData.teamA));
+// 	$("#teamB_list").append(scheduleListDataTemplate(schedulesData.teamB));
+// }
 
 function getDate(diff){
     var date = new Date();
